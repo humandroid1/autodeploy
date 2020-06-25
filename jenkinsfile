@@ -1,5 +1,6 @@
 node{
    stage('BUILD'){
+     def mvn = tool name: 'maven', type: 'maven'
      sh "${mvn}/bin/mvn clean install"
      echo "BUILD IS SUCCESSFUL"
    }
