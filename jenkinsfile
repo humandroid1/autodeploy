@@ -1,8 +1,8 @@
 node{
-   stage('SCM Checkout'){
-     git 'https://github.com/bhavanimahalingam/testjob'
+   stage('BUILD'){
+     echo BUILD IS SUCCESSFUL'
    }
-   stage('Deploy to Tomcat'){
+   stage('DEPLOY'){
     sshagent(['jenkinstom']) {
     sh 'scp -o StrictHostKeyChecking=no /var/lib/jenkins/workspace/automated_deploy/target/*.war  ec2-user@54.173.79.163:tomcat7/webapps/'
      }
