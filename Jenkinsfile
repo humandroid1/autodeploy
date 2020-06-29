@@ -11,7 +11,7 @@ node{
     }
    }
    stage('TESTING'){
-      sh "mvn test"
+      sh "mvn clean test"
    }
 }
    
