@@ -10,9 +10,6 @@ node{
      sh "mvn clean install"
     }
    }
-   stage('TESTING'){
-      sh "mvn clean test"
-   }
 }
    
  
